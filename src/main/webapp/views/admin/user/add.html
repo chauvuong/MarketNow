@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Admin HCM | User Add</title>
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	
+	<!-- starting css -->
+	<div th:replace="admin/static/css :: css">...</div>
+	<!-- end css -->
+	<style type="text/css">
+       .formError {
+		    color: red;
+		    font-style: italic;
+		}
+    </style>
+</head>
+<body class="hold-transition skin-purple sidebar-mini">
+<div class="wrapper">
+    <!-- starting header -->
+    <div th:replace="admin/static/header :: header">...</div>
+    <!-- end header -->
+
+    <!-- starting leftbar -->
+    <div th:replace="admin/static/leftbar :: leftbar">...</div>
+    <!-- end leftbar -->
+
+    <!--starting content -->
+    <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+					Add
+					<small>Users</small>
+				</h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="#">Forms</a></li>
+                    <li class="active">Add</li>
+                </ol>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-md-9">
+                        <!-- general form elements -->
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Quick Example</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <!-- form start -->
+                            <div th:if="${message_exist}" th:text="${message_exist}" class="formError"></div>
+	<div th:if="${message_matchPass}" th:text="${message_matchPass}" class="formError"></div>
+                            <form role="form" th:action="@{/admin/users/create/}" method="post"
+								th:object="${user}">
+
+								<div class="box-body">
+									<div class="form-group">
+										<label for="exampleInputUser1">Username</label>
+										<input class="form-control" id="exampleInputUser1"
+											placeholder="Enter username" th:field="*{username}">
+										<span class="formError" th:if="${#fields.hasErrors('username')}"
+                                th:errors="*{username}">Invalid username</span>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputPassword1">Password</label>
+										<input type="password" class="form-control" id="exampleInputPassword1"
+											placeholder="Enter password" th:field="*{password}">
+										<span class="formError" th:if="${#fields.hasErrors('password')}"
+                                th:errors="*{password}">Invalid password</span>	
+									</div>
+									<div class="form-group">
+										<label for="exampleInputPassword1">Password Confirm</label>
+										<input type="password" class="form-control" id="exampleInputPassword1"
+											placeholder="Enter password confirm" th:field="*{passwordConfirm}">
+
+									</div>
+									<div class="form-group">
+										<label for="exampleInputEmail1">Email</label>
+										<input class="form-control" id="exampleInputEmail1"
+											placeholder="Enter email" th:field="*{email}">
+										<span class="formError" th:if="${#fields.hasErrors('email')}"
+                                th:errors="*{email}">Invalid email</span>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputAddress1">Address</label>
+										<input class="form-control" id="exampleInputAddress1"
+											placeholder="Enter address" th:field="*{address}">
+									</div>
+									<div class="form-group">
+										<label for="exampleInputPhoneNumber1">Phone Number</label>
+										<input class="form-control" id="exampleInputPhoneNumber1"
+											placeholder="Enter phone number" th:field="*{phoneNumber}">
+									</div>
+									<!-- select -->
+                                    <div class="form-group">
+                                        <label>Select role</label>
+                                        <select th:field="*{roles}" class="form-control">
+                                            <option th:value="'ROLE_ADMIN'" th:text=ADMIN></option>
+                                            <option th:value="'ROLE_EDITOR'" th:text=EDITOR></option>
+                                        </select>
+                                    </div>
+									
+								</div>
+								<!-- /.box-body -->
+								<div class="box-footer">
+									<a th:href="@{/admin/users/}"><button
+											class="btn btn-default">Cancel</button></a>
+									<button type="submit" class="btn btn-info pull-right"
+										value="Save">Save</button>
+								</div>
+							</form>
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!--/.col (left) -->
+
+                </div>
+                <!-- /.row -->
+            </section>
+            <!-- /.content -->
+        </div>
+    <!-- end content -->
+
+    <!-- starting footer -->
+    <div th:replace="admin/static/footer :: footer">...</div>
+    <!-- end footer -->
+
+    <!-- starting right bar -->
+    <div th:replace="admin/static/rightbar :: rightbar">...</div>
+    <!-- end rightbar -->
+
+    <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- starting js -->
+<div th:replace="admin/static/js :: js">...</div>
+<!-- end js -->
+</body>
+</html>

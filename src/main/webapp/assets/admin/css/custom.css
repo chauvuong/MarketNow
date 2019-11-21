@@ -1,0 +1,9 @@
+.error {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+.pagination {
+	margin-left: 35%;
+	margin-right: auto;
+}

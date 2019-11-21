@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+	<div th:fragment="header">
+		<nav class="colorlib-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="colorlib-logo">
+								<a href="index.html">Tour</a>
+							</div>
+						</div>
+						<div class="col-xs-10 text-right menu-1">
+							<ul>
+								<li class="active"><a th:href="@{/}">Home</a></li>
+								<li class="has-dropdown"><a th:href="@{/tours/}">Tours</a>
+									<ul class="dropdown">
+										<li><a href="#">Destination</a></li>
+										<li><a href="#">Cruises</a></li>
+										<li><a href="#">Hotels</a></li>
+										<li><a href="#">Booking</a></li>
+									</ul>
+								</li>
+								<li><a href="hotels.html">Hotels</a></li>
+								<li><a href="services.html">Services</a></li>
+								<li><a href="blog.html">Blog</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>
+
+
+
+								 <!--
+								<p th:text="${uname}">ahihi</p>
+								<p th:text="${sessionScope.usernameTEO}">ahihi</p>
+								 -->
+
+								<span th:if="${session.current_user} == null">
+									<li><a th:href="@{/login}">Login</a></li>
+									<li><a th:href="@{/register}">Sign up</a></li>
+								</span>
+								<span th:if="${session.current_user} != ''" >
+									<li class="has-dropdown"><a th:text="${session.current_user}"></a>
+										<ul class="dropdown">
+											<li><a href="#">Profile</a></li>
+											<li><a th:href="@{/logout}">Logout</a></li>
+										</ul>
+									</li>
+								</span>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+
+</div>
+
+</html>

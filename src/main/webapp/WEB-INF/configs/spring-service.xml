@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	
+	<bean id="categoriesService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="app.service.impl.CategoriesServiceImpl">
+				<property name="categoriesDAO" ref="categoriesDAO" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="productsService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="app.service.impl.ProductsServiceImpl">
+				<property name="productsDAO" ref="productsDAO" />
+			</bean>
+		</property>
+	</bean>
+	
+<!-- 	
+	
+
+	<bean id="rolesService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="app.service.impl.RolesServiceImpl">
+				<property name="rolesDAO" ref="rolesDAO" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="accountsService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="app.service.impl.AccountsServiceImpl">
+				<property name="accountsDAO" ref="accountsDAO" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="shippersService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="app.service.impl.ShippersServiceImpl">
+				<property name="shippersDAO" ref="shippersDAO" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="orderStatusService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="app.service.impl.OrderStatusServiceImpl">
+				<property name="orderStatusDAO" ref="orderStatusDAO" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="ordersService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="app.service.impl.OrdersServiceImpl">
+				<property name="ordersDAO" ref="ordersDAO" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="paymentsService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="app.service.impl.PaymentsServiceImpl">
+				<property name="paymentsDAO" ref="paymentsDAO" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="productImagesService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="app.service.impl.ProductImagesServiceImpl">
+				<property name="productImagesDAO" ref="productImagesDAO" />
+			</bean>
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="orderItemsService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="app.service.impl.OrderItemsServiceImpl">
+				<property name="orderItemsDAO" ref="orderItemsDAO" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="shopsService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="app.service.impl.ShopsServiceImpl">
+				<property name="shopsDAO" ref="shopsDAO" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="brandsService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="app.service.impl.BrandsServiceImpl">
+				<property name="brandsDAO" ref="brandsDAO" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="orderItemStatusService" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="app.service.impl.OrderItemStatusServiceImpl">
+				<property name="orderItemStatusDAO" ref="orderItemStatusDAO" />
+			</bean>
+		</property>
+	</bean>
+ -->	
+
+	
+</beans>

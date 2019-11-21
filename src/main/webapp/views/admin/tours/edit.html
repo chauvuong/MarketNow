@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Admin HCM | User Add</title>
+<!-- Tell the browser to be responsive to screen width -->
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport">
+
+<!-- starting css -->
+<div th:replace="admin/static/css :: css">...</div>
+<!-- end css -->
+<head>
+<title>Add Tour Form</title>
+</head>
+
+
+<body class="hold-transition skin-purple sidebar-mini">
+	<div class="wrapper">
+		<!-- starting header -->
+		<div th:replace="admin/static/header :: header">...</div>
+		<!-- end header -->
+
+		<!-- starting leftbar -->
+		<div th:replace="admin/static/leftbar :: leftbar">...</div>
+		<!-- end leftbar -->
+		<!--starting content -->
+		<div class="content-wrapper">
+			<!-- Content Header (Page header) -->
+			<section class="content-header">
+				<h1>
+					Edit <small>Tour</small>
+				</h1>
+				<ol class="breadcrumb">
+					<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+					<li><a href="#">Forms</a></li>
+					<li class="active">Edit</li>
+				</ol>
+			</section>
+
+			<!-- Main content -->
+			<section class="content">
+				<div class="row">
+					<!-- left column -->
+					<div class="col-md-9">
+						<!-- general form elements -->
+						<div class="box box-primary">
+							<div class="box-header with-border">
+								<h3 class="box-title">Quick Example</h3>
+								<div th:if="${message}" th:text="${message}" th:class="${'alert ' + alertClass}"></div>
+							</div>
+							<!-- /.box-header -->
+							<!-- form start -->
+							<form role="form" th:action="@{/admin/tours/create/}"
+								method="post" enctype="multipart/form-data" th:object="${tour}">
+
+								<div class="box-body">
+									<div class="form-group">
+										<label for="exampleInputPassword1">Title</label>
+										 <input
+											class="form-control" id="exampleInputPassword"
+											placeholder="enter title" th:field="*{tourTitle}">
+										
+									</div>
+									<div class="form-group">
+										<label for="exampleInputPassword1">Image</label>
+										<input type="file"  value="Upload File"  name="file" th:field="*{tourImage}" />
+										
+									</div>
+									
+									<div class="form-group">
+										<label for="exampleInputPassword1">Description</label>
+										 <input
+											class="form-control" id="exampleInputPassword"
+											placeholder="enter description" th:field="*{tourDescription}">
+										
+									</div>
+									<div class="form-group">
+										<label for="exampleInputPassword1">Price</label>
+										 <input
+											class="form-control" id="exampleInputPassword"
+											placeholder="enter price" th:field="*{tourPrice}">
+										
+									</div>
+									
+									<div class="form-group">
+										<label for="exampleInputPassword1">Sale off percent</label>
+										 <input
+											class="form-control" id="exampleInputPassword"
+											placeholder="enter sale off percent" th:field="*{tourSaleOff}">
+										<!-- h5 th:if="${#fields.hasErrors('tourDetailsNumPerson')}" th:errors="*{tourDetailsNumPerson}" class="error"></h5-->
+										
+									</div>
+								
+									<div class="form-group">
+										<label >From</label>
+										 
+										 <select class="form-control"  th:field="*{from.placeId}">
+						                         <option th:each="place : ${places}"
+						                            th:value="${place.placeId}"
+						                            th:utext=${place.placeName}
+						                           ></option>
+						                  </select>
+									</div>
+									<div class="form-group">
+										<label >Destination</label>
+										 
+										 <select class="form-control"  th:field="*{destination.placeId}">
+						                         <option th:each="place : ${places}"
+						                            th:value="${place.placeId}"
+						                            th:utext=${place.placeName}
+						                           ></option>
+						                  </select>
+									</div>
+									<div class="form-group">
+										<label >Rating</label>
+										 
+										 <select class="form-control"  th:field="*{tourRating}">
+						                         <option th:each="i: ${#numbers.sequence( 1, 5)}"
+						                            th:value="${i}"
+						                            th:utext="${i}"
+						                           ></option>
+						                  </select>
+									</div>
+									<div class="form-group">
+										<label >Status</label>
+										 
+										 <select class="form-control"  th:field="*{tourStatus}">
+						                         <option th:value="0"
+						                            th:utext="false"
+						                           ></option>
+						                           <option th:value="1"
+						                            th:utext="true"
+						                           ></option>
+						                  </select>
+									</div>
+									<div class="form-group">
+										<label >Car</label>
+										 
+										 <select class="form-control"  th:field="*{car.id}">
+										 	<option th:each="car : ${cars}"
+						                            th:value="${car.id}"
+						                            th:utext="${car.numberOfSeater}+' seaters - '+${car.licensePlate}"
+						                           ></option>
+						                         
+						                  </select>
+									</div>
+								</div>
+								<!-- /.box-body -->
+								<div class="box-footer">
+									<a th:href="@{/admin/tours/}"><button
+											class="btn btn-default">Cancel</button></a>
+									<button type="submit" class="btn btn-info pull-right"
+										value="Save">save</button>
+								</div>
+							</form>
+						</div>
+						<!-- /.box -->
+						
+					</div>
+					<!--/.col (left) -->
+
+				</div>
+				<!-- /.row -->
+			</section>
+			<!-- /.content -->
+		</div>
+		<!-- end content -->
+
+		<!-- starting footer -->
+		<div th:replace="admin/static/footer :: footer">...</div>
+		<!-- end footer -->
+
+		<!-- starting right bar -->
+		<div th:replace="admin/static/rightbar :: rightbar">...</div>
+		<!-- end rightbar -->
+
+		<div class="control-sidebar-bg"></div>
+	</div>
+	<!-- ./wrapper -->
+
+	<!-- starting js -->
+	<div th:replace="admin/static/js :: js">...</div>
+	<!-- end js -->
+</body>
+</html>

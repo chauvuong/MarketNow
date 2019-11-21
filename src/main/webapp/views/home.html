@@ -1,0 +1,1744 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Home 01</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- starting css -->
+<div th:replace="static/css :: css">...</div>
+
+</head>
+<body class="animsition">
+
+	<!-- Header -->
+	<header class="header-v1">
+		<!-- Header desktop -->
+		<div class="container-menu-desktop">
+			<div class="wrap-menu-desktop">
+				<nav class="limiter-menu-desktop">
+					<div class="left-header">
+						<!-- Menu desktop -->
+						<div class="menu-desktop">
+							<ul class="main-menu">
+								
+
+								<li>
+									<a href="shop-sidebar-grid.html">SẢN PHẨM</a>
+									<ul class="sub-menu">
+										<li><a href="shop-sidebar-grid.html" th:text=${categories}>RAU CỦ</a>
+										<ul class="sub-menu">
+											<li><a href="shop-sidebar-grid.html">RAU</a></li>
+											<li><a href="shop-sidebar-grid.html">CỦ</a></li>											
+										</ul>
+										</li>
+										<li><a href="shop-sidebar-grid.html">TRÁI CÂY</a>
+											<ul class="sub-menu">
+												<li><a href="shop-sidebar-grid.html">ĐẶC SẢN VIỆT NAM</a></li>
+												<li><a href="shop-sidebar-grid.html">TRÁI CÂY NHẬP KHẨU</a></li>											
+											</ul>
+										</li>
+										<li><a href="shop-sidebar-grid.html">ĐỒ KHÔ</a></li>
+										
+									</ul>
+								</li>
+
+								<li>
+									<a href="blog-grid-01.html">THÔNG TIN TRÁI CÂY</a>
+									
+								</li>
+	
+								<li>
+									<a href="contact-02.html">LIÊN HỆ</a>
+									
+								</li>
+								
+								
+							</ul>
+						
+						</div>
+					</div>
+						
+					<div class="center-header">
+						<!-- Logo desktop -->		
+						<div class="logo">
+							<a href="home.html"><img th:src="@{/assets/images/icons/logochau.png}" alt="IMG-LOGO"></a>
+						</div>
+					</div>
+						
+					<div class="right-header">
+						<!-- Icon header -->
+						<div class="wrap-icon-header flex-w flex-r-m h-full wrap-menu-click p-t-8">
+							<!--Search -->
+							<div class="h-full flex-m">
+								<div class="icon-header-item flex-c-m trans-04 js-show-modal-search" id="d-s">
+									<img th:src="@{/assets/images/icons/icon-search.png}" alt="SEARCH">
+								</div>
+							</div>
+							<!--...-->
+							<div class="wrap-cart-header h-full flex-m m-l-10 menu-click">
+								<div id="icon-login" class="icon-header-item flex-c-m trans-04" >
+									<img th:src="@{/assets/images/icons/icon-login.png}" alt="login">
+								</div>
+								<div id="form-login" class="cart-header menu-click-child trans-04">
+									
+										<form action="javascript:void(0)" onsubmit="login()">
+											<div class="p-b-24">
+												
+												<input class="txt-s-120 cl3 size-a-21 bo-all-1 bocl15 p-rl-15 focus1" type="text" name="username" id="username" value=""
+												placeholder="Tên đăng nhập">
+											</div>
+
+											<div class="p-b-24">
+												
+												<input class="txt-s-120 cl3 size-a-21 bo-all-1 bocl15 p-rl-15 focus1" type="password" id="password" name="password"
+												placeholder="Mật khẩu" value="">
+											</div>
+
+											<div class="flex-w flex-m p-t-15 p-b-10">
+												<input type="submit" class="flex-c-m txt-s-105 cl0 bg10 size-a-39 hov-btn2 trans-04 p-rl-10 m-r-18">
+
+												<div class="flex-w flex-m p-tb-8">
+													<input id="check-creatacc" class="size-a-35 m-r-10" type="checkbox" name="creatacc">
+													<label for="check-creatacc" class="txt-s-101 cl9">
+														Ghi nhớ
+													</label>
+												</div>
+											</div>
+
+											<a href="account-lost-pass.html" class="txt-s-101 cl9 hov-cl10 trans-04">
+												Quên mật khẩu?
+											</a>
+										</form>
+										<a href="account.html" class="txt-s-101 cl9 hov-cl10 trans-04">
+											Đăng ký
+										</a>
+										<div class="social">
+											<div class="social-inner">
+											  <a class="fa fa-2x fa-google btn btn-danger" href="#"></a>
+											  <a class="fa fa-2x fa-twitter btn btn-info" href="#"></a>
+											  <a class="fa fa-2x fa-facebook btn btn-primary" href="#"></a>
+											</div>
+										</div>
+								</div>
+							</div>
+							<!--....-->
+							<!--...-->
+							<div style="display: none" id="icon-user" class="wrap-cart-header h-full flex-m m-l-10 menu-click">
+								<div class="icon-header-item flex-c-m trans-04">
+									<img th:src="@{/assets/images/icons/icon-user.png}" alt="user">
+								</div>	
+								<div class="cart-header menu-click-child trans-04">
+									<a href="myaccount.html" class="txt-s-101 cl9 hov-cl10 trans-04">Chi Tiết</a><br/>
+									<a href="wishlist.html" class="txt-s-101 cl9 hov-cl10 trans-04">WishList</a><br/>
+									<a href="wishlist.html" class="txt-s-101 cl9 hov-cl10 trans-04">Đăng xuất</a>
+								</div>
+							</div>
+							<!--....-->
+
+							
+							<div class="wrap-cart-header h-full flex-m m-l-10 menu-click">
+								<div class="icon-header-item flex-c-m trans-04 icon-header-noti" data-notify="2">
+									<img th:src="@{/assets/images/icons/icon-cart-2.png}" alt="CART">
+								</div>
+								
+								<div class="cart-header menu-click-child trans-04">
+									<div class="bo-b-1 bocl15">
+										<div class="size-h-2 js-pscroll m-r--15 p-r-15">
+											<!-- cart header item -->
+											<div class="flex-w flex-str m-b-25">
+												<div class="size-w-15 flex-w flex-t">
+													<a href="product-single.html" class="wrap-pic-w bo-all-1 bocl12 size-w-16 hov3 trans-04 m-r-14">
+														<img th:src="@{/assets/images/item-cart-01.jpg}" alt="PRODUCT">
+													</a>
+
+													<div class="size-w-17 flex-col-l">
+														<a href="product-single.html" class="txt-s-108 cl3 hov-cl10 trans-04">
+															Cheery
+														</a>
+
+														<span class="txt-s-101 cl9">
+															18vnd
+														</span>
+
+														<span class="txt-s-109 cl12">
+															x2
+														</span>
+													</div>
+												</div>
+
+												<div class="size-w-14 flex-b">
+													<button class="lh-10">
+														<img th:src="@{/assets/images/icons/icon-close.png}" alt="CLOSE">
+													</button>
+												</div>
+											</div>
+
+											<!-- cart header item -->
+											<div class="flex-w flex-str m-b-25">
+												<div class="size-w-15 flex-w flex-t">
+													<a href="product-single.html" class="wrap-pic-w bo-all-1 bocl12 size-w-16 hov3 trans-04 m-r-14">
+														<img th:src="@{/assets/images/item-cart-02.jpg}" alt="PRODUCT">
+													</a>
+
+													<div class="size-w-17 flex-col-l">
+														<a href="product-single.html" class="txt-s-108 cl3 hov-cl10 trans-04">
+															Asparagus
+														</a>
+
+														<span class="txt-s-101 cl9">
+															12vnd
+														</span>
+
+														<span class="txt-s-109 cl12">
+															x1
+														</span>
+													</div>
+												</div>
+
+												<div class="size-w-14 flex-b">
+													<button class="lh-10">
+														<img th:src="@{/assets/images/icons/icon-close.png}" alt="CLOSE">
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+										
+
+									<div class="flex-w flex-sb-m p-t-22 p-b-12">
+										<span class="txt-m-103 cl3 p-r-20">
+											Tổng tiền
+										</span>
+
+										<span class="txt-m-111 cl6">
+											48vnd
+										</span>
+									</div>
+
+									<div class="flex-w flex-sb-m p-b-31">
+										<span class="txt-m-103 cl3 p-r-20">
+											Thành tiền
+										</span>
+
+										<span class="txt-m-111 cl10">
+											48vnd
+										</span>
+									</div>
+									
+									<a href="shop-cart.html" class="flex-c-m size-a-8 bg10 txt-s-105 cl13 hov-btn2 trans-04">
+										Chi tiết
+									</a>	
+								</div>
+							</div>
+						</div>
+					
+					</div>
+				</nav>
+				<!--Edit Search-->
+				<div style="display: none" class="container-search-header" id="desktop-search" >
+					<form class="wrap-search-header flex-w">
+						<button class="flex-c-m trans-04">
+							<span class="lnr lnr-magnifier"></span>
+						</button>
+						<input class="plh1" type="text" name="search" placeholder="Search tất cả">
+					</form>
+				</div>
+				<!--Edit Search-->
+			</div>	
+		</div>
+
+		
+		
+		
+	</header>
+	
+	<!-- Slider -->
+	<section class="sec-slider">
+		<div class="rev_slider_wrapper fullwidthbanner-container" >
+			<div id="rev_slider_1" class="rev_slide fullwidthabanner" data-version="5.4.5" style="display:none">
+				<ul>
+					
+					<li data-transition="fade">
+						<!--  -->
+						<img th:src="@{/assets/images/Banner1.jpg}" alt="IMG-BG" class="rev-slidebg">
+						
+						<!--  -->
+						<div class="tp-caption tp-resizeme layer1" 
+						data-frames='[{"delay":1300,"speed":1300,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+
+						data-visibility="['on', 'on', 'on', 'on']"
+ 
+					    data-fontsize="['35', '35', '35', '35']" 
+					    data-lineheight="['42', '42', '42', '42']"
+					    data-color="['#333']" 
+					    data-textAlign="['left', 'left', 'center', 'center']"
+					 
+					    data-x="['left']" 
+					    data-y="['center']" 
+					    data-hoffset="['310', '80', '0', '0']" 
+					    data-voffset="['-78', '-78', '-78', '-150']"
+					 
+					    data-width="['650','650','768','576']"
+					    data-height="['auto']" 
+					    data-whitespace="['normal']" 
+					 
+					    data-paddingtop="[0, 0, 0, 0]"
+					    data-paddingright="[15, 15, 15, 15]"
+					    data-paddingbottom="[0, 0, 0, 0]"
+					    data-paddingleft="[15, 15, 15, 15]"
+
+					    data-basealign="slide" 
+    					data-responsive_offset="on"
+					    >
+					    	<span class="child1">organic</span> <span class="child2">products</span>
+					    </div>
+						
+						<!--  -->
+						<h2 class="tp-caption tp-resizeme layer2" 
+						data-frames='[{"delay":500,"speed":1500,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+						data-visibility="['on', 'on', 'on', 'on']"
+ 
+					    data-fontsize="['75', '75', '75', '75']" 
+					    data-lineheight="['82', '82', '82', '82']"
+					    data-color="['#333']" 
+					    data-textAlign="['left', 'left', 'center', 'center']"
+					 
+					    data-x="['left']" 
+					    data-y="['center']" 
+					    data-hoffset="['310', '80', '0', '0']" 
+					    data-voffset="['0', '0', '0', '-30']"
+					 
+					    data-width="['650','650','768','576']"
+					    data-height="['auto']" 
+					    data-whitespace="['normal']" 
+					 
+					    data-paddingtop="[0, 0, 0, 0]"
+					    data-paddingright="[15, 15, 15, 15]"
+					    data-paddingbottom="[0, 0, 0, 0]"
+					    data-paddingleft="[15, 15, 15, 15]"
+
+					    data-basealign="slide" 
+    					data-responsive_offset="on"
+					    >
+					    	Fresh Fr<span>u</span>its
+					    </h2>
+						
+						<!--  -->
+						<p class="tp-caption tp-resizeme layer3" 
+						data-frames='[{"delay":1300,"speed":1300,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+						data-visibility="['on', 'on', 'on', 'on']"
+ 
+					    data-fontsize="['15', '15', '15', '15']" 
+					    data-lineheight="['24', '24', '24', '24']"
+					    data-color="['#666']" 
+					    data-textAlign="['left', 'left', 'center', 'center']"
+					 
+					    data-x="['left']" 
+					    data-y="['center']" 
+					    data-hoffset="['310', '80', '0', '0']"  
+					    data-voffset="['95', '95', '95', '95']" 
+					 
+					    data-width="['650','650','768','576']"
+					    data-height="['auto', 'auto', 'auto', 'auto']" 
+					    data-whitespace="['normal']" 
+					 
+					    data-paddingtop="[0, 0, 0, 0]"
+					    data-paddingright="[15, 15, 35, 15]"
+					    data-paddingbottom="[0, 0, 0, 0]"
+					    data-paddingleft="[15, 15, 35, 15]"
+
+					    data-basealign="slide" 
+    					data-responsive_offset="on"
+					    >
+					    	
+					    </p>
+
+					    <!--  -->	
+						<div class="tp-caption tp-resizeme flex-w layer4"
+						data-frames='[{"delay":2500,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.6;sY:0.6;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+					   	data-x="['left']"
+					    data-y="['center']" 
+					    data-hoffset="['310', '80', '0', '0']" 
+					    data-voffset="['203', '203', '203', '203']"
+					 
+					    data-width="['650','650','768','576']"
+					    data-height="['auto']" 
+					 
+					    data-paddingtop="[0, 0, 0, 0]"
+					    data-paddingright="[15, 15, 15, 15]"
+					    data-paddingbottom="[0, 0, 0, 0]"
+					    data-paddingleft="[15, 15, 15, 15]"
+
+					    data-basealign="slide" 
+    					data-responsive_offset="on"
+					    >
+						    <a href="shop-sidebar-grid.html" class="btn-slide flex-c-m">
+						    	Mua ngay
+						    	<span class="lnr lnr-chevron-right m-l-7"></span>
+						    	<span class="lnr lnr-chevron-right"></span>
+						    </a>
+						</div>
+					</li>
+
+				
+					<li data-transition="fade">
+						<!--  -->
+						<img th:src="@{/assets/images/Banner6.jpg}" alt="IMG-BG" class="rev-slidebg">
+						
+						<!--  -->
+						<div class="tp-caption tp-resizeme layer1" 
+						data-frames='[{"delay":500,"speed":1300,"frame":"0","from":"y:150px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+
+						data-visibility="['on', 'on', 'on', 'on']"
+ 
+					    data-fontsize="['35', '35', '35', '35']" 
+					    data-lineheight="['42', '42', '42', '42']"
+					    data-color="['#333']" 
+					    data-textAlign="['left', 'left', 'center', 'center']"
+					 
+					    data-x="['left']" 
+					    data-y="['center']" 
+					    data-hoffset="['310', '80', '0', '0']" 
+					    data-voffset="['-78', '-78', '-78', '-150']"
+					 
+					    data-width="['650','650','768','576']"
+					    data-height="['auto']" 
+					    data-whitespace="['normal']" 
+					 
+					    data-paddingtop="[0, 0, 0, 0]"
+					    data-paddingright="[15, 15, 15, 15]"
+					    data-paddingbottom="[0, 0, 0, 0]"
+					    data-paddingleft="[15, 15, 15, 15]"
+
+					    data-basealign="slide" 
+    					data-responsive_offset="on"
+					    >
+					    	<span class="child1">organic</span> <span class="child2">products</span>
+					    </div>
+						
+						<!--  -->
+						<h2 class="tp-caption tp-resizeme layer2" 
+						data-frames='[{"delay":1300,"speed":1300,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+						data-visibility="['on', 'on', 'on', 'on']"
+ 
+					    data-fontsize="['75', '75', '75', '75']" 
+					    data-lineheight="['82', '82', '82', '82']"
+					    data-color="#E2C7C7" 
+					    data-textAlign="['left', 'left', 'center', 'center']"
+					 
+					    data-x="['left']" 
+					    data-y="['center']" 
+					    data-hoffset="['310', '80', '0', '0']" 
+					    data-voffset="['0', '0', '0', '-30']"
+					 
+					    data-width="['650','650','768','576']"
+					    data-height="['auto']" 
+					    data-whitespace="['normal']" 
+					 
+					    data-paddingtop="[0, 0, 0, 0]"
+					    data-paddingright="[15, 15, 15, 15]"
+					    data-paddingbottom="[0, 0, 0, 0]"
+					    data-paddingleft="[15, 15, 15, 15]"
+
+					    data-basealign="slide" 
+    					data-responsive_offset="on"
+					    >
+					    	Fresh Veget<span>a</span>bles 
+					    </h2>
+						
+						<!--  -->
+						<p class="tp-caption tp-resizeme layer3" 
+						data-frames='[{"delay":500,"speed":1300,"frame":"0","from":"y:-150px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+						data-visibility="['on', 'on', 'on', 'on']"
+ 
+					    data-fontsize="['15', '15', '15', '15']" 
+					    data-lineheight="['24', '24', '24', '24']"
+					    data-color="['#666']" 
+					    data-textAlign="['left', 'left', 'center', 'center']"
+					 
+					    data-x="['left']" 
+					    data-y="['center']" 
+					    data-hoffset="['310', '80', '0', '0']"  
+					    data-voffset="['95', '95', '95', '95']" 
+					 
+					    data-width="['650','650','768','576']"
+					    data-height="['auto', 'auto', 'auto', 'auto']" 
+					    data-whitespace="['normal']" 
+					 
+					    data-paddingtop="[0, 0, 0, 0]"
+					    data-paddingright="[15, 15, 35, 15]"
+					    data-paddingbottom="[0, 0, 0, 0]"
+					    data-paddingleft="[15, 15, 35, 15]"
+
+					    data-basealign="slide" 
+    					data-responsive_offset="on"
+					    >
+					    	
+					    </p>
+
+					    <!--  -->	
+						<div class="tp-caption tp-resizeme flex-w layer4"
+						data-frames='[{"delay":2000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+					   	data-x="['left']"
+					    data-y="['center']" 
+					    data-hoffset="['310', '80', '0', '0']" 
+					    data-voffset="['203', '203', '203', '203']"
+					 
+					    data-width="['650','650','768','576']"
+					    data-height="['auto']" 
+					 
+					    data-paddingtop="[0, 0, 0, 0]"
+					    data-paddingright="[15, 15, 15, 15]"
+					    data-paddingbottom="[0, 0, 0, 0]"
+					    data-paddingleft="[15, 15, 15, 15]"
+
+					    data-basealign="slide" 
+    					data-responsive_offset="on"
+					    >
+						    <a href="shop-sidebar-grid.html" class="btn-slide flex-c-m">
+						    	Mua ngay
+						    	<span class="lnr lnr-chevron-right m-l-7"></span>
+						    	<span class="lnr lnr-chevron-right"></span>
+						    </a>
+						</div>
+					</li>
+
+
+				</ul>				
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- Item -->
+	<div style="margin-top:40px" class="sec-item flex-w">
+		<!--  -->
+		<div class="of-hidden size-w-2 respon2" style="margin: auto; width:25%">
+			<div class="hov-img1 pos-relative">
+				<img  th:src="@{/assets/images/vegetable.jpg}" alt="IMG">
+
+				<a href="shop-sidebar-grid.html" class="s-full ab-t-l flex-col-c-m bg11 p-all-15 hov1-parent">
+					<div class="wrap-pic-max-w">
+						<img th:src="@{/assets/images/icons/symbol-03.png}" alt="IMG">
+					</div>
+
+					<span class="txt-l-102 cl0 txt-center p-t-30 p-b-13">
+						RAU CỦ
+					</span>
+					
+					<div class="hov1 trans-04">
+						<div class="txt-m-102 cl0 txt-center hov1-child trans-04">
+							- 5 Sản phẩm -
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>	
+		
+		<!--  -->
+		<!-- <div class="of-hidden size-w-2 respon2">
+			<div class="hov-img1 pos-relative">
+				<img src="images/vietnam1.jpg" alt="IMG">
+
+				<a href="shop-sidebar-grid.html" class="s-full ab-t-l flex-col-c-m bg11 p-all-15 hov1-parent">
+					<div class="wrap-pic-max-w">
+						<img src="images/icons/symbol-04.png" alt="IMG">
+					</div>
+
+					<span class="txt-l-102 cl0 txt-center p-t-30 p-b-13">
+						TRÁI CÂY VIỆT NAM
+					</span>
+					
+					<div class="hov1 trans-04">
+						<div class="txt-m-102 cl0 txt-center hov1-child trans-04">
+							- 8 Sản phẩm -
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>	
+
+		<!--  -->
+		<div class="of-hidden size-w-2 respon2" style="margin: auto; width:25%">
+			<div class="hov-img1 pos-relative">
+				<img  th:src="@{/assets/images/nhapkhau.jpg}" alt="IMG">
+
+				<a href="shop-sidebar-grid.html" class="s-full ab-t-l flex-col-c-m bg11 p-all-15 hov1-parent">
+					<div class="wrap-pic-max-w">
+						<img th:src="@{/assets/images/icons/symbol-05.png}" alt="IMG">
+					</div>
+
+					<span class="txt-l-102 cl0 txt-center p-t-30 p-b-13">
+						TRÁI CÂY NHẬP
+					</span>
+					
+					<div class="hov1 trans-04">
+						<div class="txt-m-102 cl0 txt-center hov1-child trans-04">
+							- 15 Sản phẩm -
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>	
+
+		<!--  -->
+		<div class="of-hidden size-w-2 respon2" style="margin: auto; width:25%">
+			<div class="hov-img1 pos-relative">
+				<img th:src="@{/assets/images/kho.jpg}" alt="IMG">
+
+				<a href="shop-sidebar-grid.html" class="s-full ab-t-l flex-col-c-m bg11 p-all-15 hov1-parent">
+					<div class="wrap-pic-max-w">
+						<img th:src="@{/assets/images/icons/symbol-06.png}" alt="IMG">
+					</div>
+
+					<span class="txt-l-102 cl0 txt-center p-t-30 p-b-13">
+						ĐỒ KHÔ
+					</span>
+					
+					<div class="hov1 trans-04">
+						<div class="txt-m-102 cl0 txt-center hov1-child trans-04">
+							- 25 Sản phẩm -
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>	
+	</div>
+
+	<!-- Product -->
+	<div class="sec-product bg0 p-t-145 p-b-25">
+		<div class="container">
+			<div class="size-a-1 flex-col-c-m p-b-48">
+				<div class="txt-center txt-m-201 cl10 how-pos1-parent m-b-14">
+					Sản phẩm nổi bật
+
+					<div class="how-pos1">
+						<img th:src="@{/assets/images/icons/symbol-02.png}" alt="IMG">
+					</div>
+				</div>
+
+				<h3 class="txt-center txt-l-101 cl3 respon1">
+					SẢN PHẨM ORGANIC
+				</h3>
+			</div>
+
+			<div class="p-b-46">
+				<div class="flex-w flex-c-m filter-tope-group">
+					<button class="txt-m-104 cl9 hov2 trans-04 p-rl-27 p-b-10 how-active1" data-filter="*">
+						Tất cả
+					</button>
+
+					<button class="txt-m-104 cl9 hov2 trans-04 p-rl-27 p-b-10" data-filter=".vegetable-fill">
+						Rau củ
+					</button>
+
+					<button class="txt-m-104 cl9 hov2 trans-04 p-rl-27 p-b-10" data-filter=".fruit-fill">
+						Trái cây Việt Nam
+					</button>
+
+					<button class="txt-m-104 cl9 hov2 trans-04 p-rl-27 p-b-10" data-filter=".fruit-juic-fill">
+						Trái cây nhập khẩu
+					</button>
+
+					<button class="txt-m-104 cl9 hov2 trans-04 p-rl-27 p-b-10" data-filter=".dried-fill">
+						Đồ khô
+					</button>
+
+					<button class="txt-m-104 cl9 hov2 trans-04 p-rl-27 p-b-10" data-filter=".other-fill">
+						Khác
+					</button>
+				</div>
+			</div>
+			
+			<div class="row isotope-grid">
+				<!-- - -->
+				<div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item fruit-juic-fill other-fill">
+					
+					<div class="block1">
+						<div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
+							<img th:src="@{/assets/images/product-01.jpg}" alt="IMG">
+
+							<div class="block1-content flex-col-c-m p-b-46">
+								<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+									Red pumpkin
+								</a>
+
+								<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+									21vnd
+								</span>
+
+								<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+									<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+										<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+									</a>
+
+									<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+										<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+									</a>
+
+									<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+										<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+										<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+
+				<!-- - -->
+				<div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item fruit-fill">
+					
+					<div class="block1">
+						<div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
+							<img th:src="@{/assets/images/product-02.jpg}" alt="IMG">
+
+							<div class="block1-content flex-col-c-m p-b-46">
+								<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+									Strawberry
+								</a>
+
+								<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+									23vnd
+								</span>
+
+								<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+									<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+										<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+									</a>
+
+									<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+										<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+									</a>
+
+									<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+										<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+										<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- - -->
+				<div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item vegetable-fill dried-fill other-fill">
+					
+					<div class="block1">
+						<div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
+							<img th:src="@{/assets/images/product-03.jpg}" alt="IMG">
+
+							<div class="block1-content flex-col-c-m p-b-46">
+								<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+									Cauliflower
+								</a>
+
+								<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+									19vnd
+								</span>
+
+								<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+									<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+										<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+									</a>
+
+									<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+										<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+									</a>
+
+									<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+										<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+										<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- - -->
+				<div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item vegetable-fill dried-fill">
+					
+					<div class="block1">
+						<div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
+							<img th:src="@{/assets/images/product-04.jpg}" alt="IMG">
+
+							<div class="block1-content flex-col-c-m p-b-46">
+								<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+									Vegetable
+								</a>
+
+								<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+									22vnd
+								</span>
+
+								<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+									<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+										<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+									</a>
+
+									<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+										<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+									</a>
+
+									<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+										<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+										<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- - -->
+				<div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item fruit-fill fruit-juic-fill other-fill">
+					
+					<div class="block1">
+						<div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
+							<img th:src="@{/assets/images/product-05.jpg}" alt="IMG">
+
+							<div class="block1-content flex-col-c-m p-b-46">
+								<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+									Bell pepper
+								</a>
+
+								<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+									12vnd
+								</span>
+
+								<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+									<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+										<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+									</a>
+
+									<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+										<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+									</a>
+
+									<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+										<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+										<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- - -->
+				<div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item fruit-juic-fill">
+					
+					<div class="block1">
+						<div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
+							<img th:src="@{/assets/images/product-06.jpg}" alt="IMG">
+
+							<div class="block1-content flex-col-c-m p-b-46">
+								<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+									Beetroot
+								</a>
+
+								<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+									9vnd
+								</span>
+
+								<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+									<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+										<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+									</a>
+
+									<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+										<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+									</a>
+
+									<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+										<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+										<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item vegetable-fill other-fill">
+					
+					<div class="block1">
+						<div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
+							<img th:src="@{/assets/images/product-07.jpg}" alt="IMG">
+
+							<div class="block1-content flex-col-c-m p-b-46">
+								<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+									Cabbage
+								</a>
+
+								<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+									15vnd
+								</span>
+
+								<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+									<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+										<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+									</a>
+
+									<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+										<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+									</a>
+
+									<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+										<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+										<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- - -->
+				<div class="col-sm-6 col-md-4 col-lg-3 p-b-75 isotope-item fruit-fill fruit-juic-fill">
+					
+					<div class="block1">
+						<div class="block1-bg wrap-pic-w bo-all-1 bocl12 hov3 trans-04">
+							<img th:src="@{/assets/images/product-08.jpg}" alt="IMG">
+
+							<div class="block1-content flex-col-c-m p-b-46">
+								<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+									Tomato
+								</a>
+
+								<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+									38vnd
+								</span>
+
+								<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+									<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+										<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+									</a>
+
+									<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+										<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+									</a>
+
+									<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+										<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+										<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Deal -->
+	<section class="sec-deal bg-img1" style="background-image: url('images/bg-01.jpg');">
+		<div class="flex-w flex-m how-pos2-parent">
+			<img class="how-pos2 respon4 dis-none-xl" th:src="@{/assets/images/deal1.png}" alt="IMG">
+
+			<div class="size-w-3 txt-center wrap-pic-max-s w-full-lg">
+				<img th:src="@{/assets/images/deal.png}" alt="IMG">
+			</div>
+
+			<div class="size-w-4 p-t-105 p-b-90 p-r-15 respon3">
+				<div class="size-a-1 flex-col-l-m p-b-35">
+					<div class="txt-m-201 cl10 how-pos1-parent m-b-14">
+						Giá tốt nhất
+
+						<div class="how-pos1">
+							<img th:src="@{/assets/images/icons/symbol-02.png}" alt="IMG">
+						</div>
+					</div>
+
+					<h3 class="txt-l-101 cl3 respon1">
+						deal chớp nhoáng
+					</h3>
+				</div>
+
+				<div class="p-b-32">
+					<a href="#" class="txt-m-105 cl6 hov-cl10 trans-04">
+						Bắp Cẩm Nam Hội An
+					</a>
+
+					<div class="txt-m-105 p-t-15 p-b-22">
+						<span class="cl9">
+							20vnd
+						</span>
+
+						<span class="cl10">
+							Chỉ còn 15vnd
+						</span>
+					</div>
+
+					<p class="txt-s-102 cl9">
+						Bắp nếp Cẩm Nam ngọt, thơm, mềm dẻo rất đặc trưng hoàn toàn khác biệt với những nơi khác do vị trí nằm ở bãi bồi cồn bãi bốn bề sông nước, khí hậu, thổ nhưỡng quanh năm ôn hòa
+					</p>
+				</div>
+
+				<div class="flex-w coutdown100 p-b-22" data-year="0" data-month="0" data-date="10" data-hours="23" data-minutes="0" data-seconds="0" data-timezone="auto">
+					<div class="flex-col-c-m how1 p-b-5 m-r-20 m-b-20">
+						<span class="txt-l-102 cl6 days">
+							10
+						</span>
+
+						<span class="txt-m-106 cl9">
+							ngày
+						</span>
+					</div>
+
+					<div class="flex-col-c-m how1 p-b-5 m-r-20 m-b-20">
+						<span class="txt-l-102 cl6 hours">
+							25
+						</span>
+
+						<span class="txt-m-106 cl9">
+							giờ
+						</span>
+					</div>
+
+					<div class="flex-col-c-m how1 p-b-5 m-r-20 m-b-20">
+						<span class="txt-l-102 cl6 minutes">
+							56
+						</span>
+
+						<span class="txt-m-106 cl9">
+							phút
+						</span>
+					</div>
+
+					<div class="flex-col-c-m how1 p-b-5 m-r-20 m-b-20">
+						<span class="txt-l-102 cl6 seconds">
+							42
+						</span>
+
+						<span class="txt-m-106 cl9">
+							giây
+						</span>
+					</div>
+				</div>
+				
+				<div class="flex-w">
+					<a href="shop-sidebar-grid.html" class="flex-c-m txt-s-103 cl6 size-a-2 how-btn1 bo-all-1 bocl11 hov-btn1 trans-04">
+						Mua ngay
+						<span class="lnr lnr-chevron-right m-l-7"></span>
+						<span class="lnr lnr-chevron-right"></span>
+					</a>
+				</div>
+					
+			</div>
+		</div>
+	</section>
+
+	
+	<!-- Product2 -->
+	<section class="sec-product2 bg0 p-t-110 p-b-50">
+		<div class="size-w-20 m-rl-auto p-rl-15">
+			<div class="row">
+				<div class="col-lg-6 p-b-100">
+					<div class="p-rl-15 p-rl-0-xl">
+						<div class="size-a-1 flex-col-c-m p-b-44">
+							<div class="txt-center txt-m-202 cl10 how-pos1-parent m-b-8">
+								SẢN PHẨM ORGANIC ƯA CHUỘNG
+
+								<div class="how-pos1 p-b-3">
+									<img th:src="@{/assets/images/icons/symbol-02.2.png}" alt="IMG">
+								</div>
+							</div>
+
+							<h3 class="txt-center">
+								<span class="txt-l-109 cl6">
+									SẢN PHẨM
+								</span>
+
+								<span class="txt-l-108 cl3">
+									NỔI BẬT
+								</span> 
+							</h3>
+						</div>
+
+						
+						<div class="wrap-slick4 bo-all-1 bocl12">
+							<div class="slick4">
+								<div class="item-slick4">
+									
+									<div class="block1">
+										<div class="block1-bg wrap-pic-w">
+											<img th:src="@{/assets/images/product-18.jpg}" alt="IMG">
+
+											<div class="block1-content flex-col-c-m p-b-46">
+												<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+													Cherry
+												</a>
+
+												<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+													21$
+												</span>
+
+												<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+													<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+														<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+													</a>
+
+													<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+														<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+													</a>
+
+													<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+														<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+														<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+
+								<div class="item-slick4">
+									
+									<div class="block1">
+										<div class="block1-bg wrap-pic-w">
+											<img th:src="@{/assets/images/product-19.jpg}" alt="IMG">
+
+											<div class="block1-content flex-col-c-m p-b-46">
+												<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+													Asparagus
+												</a>
+
+												<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+													12$
+												</span>
+
+												<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+													<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+														<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+													</a>
+
+													<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+														<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+													</a>
+
+													<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+														<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+														<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+
+								<div class="item-slick4">
+									
+									<div class="block1">
+										<div class="block1-bg wrap-pic-w">
+											<img th:src="@{/assets/images/product-20.jpg}" alt="IMG">
+
+											<div class="block1-content flex-col-c-m p-b-46">
+												<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+													Onion
+												</a>
+
+												<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+													8$
+												</span>
+
+												<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+													<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+														<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+													</a>
+
+													<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+														<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+													</a>
+
+													<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+														<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+														<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+
+								<div class="item-slick4">
+									
+									<div class="block1">
+										<div class="block1-bg wrap-pic-w">
+											<img th:src="@{/assets/images/product-18.jpg}" alt="IMG">
+
+											<div class="block1-content flex-col-c-m p-b-46">
+												<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+													Cherry
+												</a>
+
+												<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+													21$
+												</span>
+
+												<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+													<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+														<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+													</a>
+
+													<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+														<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+													</a>
+
+													<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+														<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+														<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+
+								<div class="item-slick4">
+									
+									<div class="block1">
+										<div class="block1-bg wrap-pic-w">
+											<img th:src="@{/assets/images/product-19.jpg}" alt="IMG">
+
+											<div class="block1-content flex-col-c-m p-b-46">
+												<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+													Asparagus
+												</a>
+
+												<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+													12$
+												</span>
+
+												<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+													<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+														<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+													</a>
+
+													<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+														<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+													</a>
+
+													<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+														<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+														<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+
+								<div class="item-slick4">
+									
+									<div class="block1">
+										<div class="block1-bg wrap-pic-w">
+											<img th:src="@{/assets/images/product-20.jpg}" alt="IMG">
+
+											<div class="block1-content flex-col-c-m p-b-46">
+												<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+													Onion
+												</a>
+
+												<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+													8$
+												</span>
+
+												<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+													<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+														<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+													</a>
+
+													<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+														<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+													</a>
+
+													<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+														<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+														<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+							</div>
+
+							<div class="wrap-arrow-slick4 flex-w">
+								<button class="arrow-slick4 prev-slick4">
+									<i class="fa fa-angle-left" aria-hidden="true"></i>
+								</button>
+
+	              				<button class="arrow-slick4 next-slick4">
+	              					<i class="fa fa-angle-right" aria-hidden="true"></i>
+	              				</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6 p-b-100">
+					<div class="p-rl-15 p-rl-0-xl">
+						<div class="size-a-1 flex-col-c-m p-b-44">
+							<div class="txt-center txt-m-202 cl10 how-pos1-parent m-b-8">
+								SẢN PHẨM CÁC NÔNG TRẠI
+
+								<div class="how-pos1 p-b-3">
+									<img th:src="@{/assets/images/icons/symbol-02.2.png}" alt="IMG">
+								</div>
+							</div>
+
+							<h3 class="txt-center">
+								<span class="txt-l-109 cl6">
+									SẢN PHẨM
+								</span>
+
+								<span class="txt-l-108 cl3">
+									SALE OFF
+								</span> 
+							</h3>
+						</div>
+
+						<div class="wrap-slick4 bo-all-1 bocl12">
+							<div class="slick4">
+								<div class="item-slick4">
+									
+									<div class="block1">
+										<div class="block1-bg wrap-pic-w">
+											<img th:src="@{/assets/images/product-21.jpg}" alt="IMG">
+
+											<div class="block1-content flex-col-c-m p-b-46">
+												<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+													Mango
+												</a>
+
+												<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+													38$
+												</span>
+
+												<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+													<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+														<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+													</a>
+
+													<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+														<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+													</a>
+
+													<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+														<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+														<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+
+								<div class="item-slick4">
+									
+									<div class="block1">
+										<div class="block1-bg wrap-pic-w">
+											<img th:src="@{/assets/images/product-22.jpg}" alt="IMG">
+
+											<div class="block1-content flex-col-c-m p-b-46">
+												<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+													Grape
+												</a>
+
+												<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+													23$
+												</span>
+
+												<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+													<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+														<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+													</a>
+
+													<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+														<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+													</a>
+
+													<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+														<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+														<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+
+								<div class="item-slick4">
+									
+									<div class="block1">
+										<div class="block1-bg wrap-pic-w">
+											<img th:src="@{/assets/images/product-23.jpg}" alt="IMG">
+
+											<div class="block1-content flex-col-c-m p-b-46">
+												<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+													Pomegranate
+												</a>
+
+												<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+													19$
+												</span>
+
+												<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+													<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+														<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+													</a>
+
+													<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+														<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+													</a>
+
+													<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+														<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+														<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+
+								<div class="item-slick4">
+									
+									<div class="block1">
+										<div class="block1-bg wrap-pic-w">
+											<img th:src="@{/assets/images/product-21.jpg}" alt="IMG">
+
+											<div class="block1-content flex-col-c-m p-b-46">
+												<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+													Mango
+												</a>
+
+												<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+													38$
+												</span>
+
+												<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+													<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+														<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+													</a>
+
+													<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+														<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+													</a>
+
+													<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+														<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+														<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+
+								<div class="item-slick4">
+									
+									<div class="block1">
+										<div class="block1-bg wrap-pic-w">
+											<img th:src="@{/assets/images/product-22.jpg}" alt="IMG">
+
+											<div class="block1-content flex-col-c-m p-b-46">
+												<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+													Grape
+												</a>
+
+												<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+													23$
+												</span>
+
+												<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+													<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+														<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+													</a>
+
+													<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+														<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+													</a>
+
+													<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+														<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+														<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+
+								<div class="item-slick4">
+									
+									<div class="block1">
+										<div class="block1-bg wrap-pic-w">
+											<img th:src="@{/assets/images/product-23.jpg}" alt="IMG">
+
+											<div class="block1-content flex-col-c-m p-b-46">
+												<a href="product-single.html" class="txt-m-103 cl3 txt-center hov-cl10 trans-04 js-name-b1">
+													Pomegranate
+												</a>
+
+												<span class="block1-content-more txt-m-104 cl9 p-t-21 trans-04">
+													19$
+												</span>
+
+												<div class="block1-wrap-icon flex-c-m flex-w trans-05">
+													<a href="product-single.html" class="block1-icon flex-c-m wrap-pic-max-w">
+														<img th:src="@{/assets/images/icons/icon-view.png}" alt="ICON">
+													</a>
+
+													<a href="#" class="block1-icon flex-c-m wrap-pic-max-w js-addcart-b1">
+														<img th:src="@{/assets/images/icons/icon-cart.png}" alt="ICON">
+													</a>
+
+													<a href="wishlist.html" class="block1-icon flex-c-m wrap-pic-max-w js-addwish-b1">
+														<img class="icon-addwish-b1" th:src="@{/assets/images/icons/icon-heart.png}" alt="ICON">
+														<img class="icon-addedwish-b1" th:src="@{/assets/images/icons/icon-heart2.png}" alt="ICON">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+							</div>
+
+							<div class="wrap-arrow-slick4 flex-w">
+								<button class="arrow-slick4 prev-slick4">
+									<i class="fa fa-angle-left" aria-hidden="true"></i>
+								</button>
+
+	              				<button class="arrow-slick4 next-slick4">
+	              					<i class="fa fa-angle-right" aria-hidden="true"></i>
+	              				</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<!-- Footer -->
+	<footer class="bg12">
+		<div class="container">
+			<div class="wrap-footer flex-w p-t-60 p-b-62">
+				<div class="footer-col1">
+					<div class="footer-col-title">
+						<a href="#">
+							<img th:src="@{/assets/images/icons/logochau.png}" alt="LOGO">
+						</a>
+					</div>
+
+					<p class="txt-s-101 cl6 size-w-10 p-b-16">
+						Trái cây ngon giao tận nơi
+					</p>
+
+					<ul>
+						<li class="txt-s-101 cl6 flex-t p-b-10">
+							<span class="size-w-11">
+								<img th:src="@{/assets/images/icons/icon-mail.png}" alt="ICON-MAIL">
+							</span>
+							
+							<span class="size-w-12 p-t-1">
+								nhom115tlt2@gmail.com
+							</span>
+						</li>
+
+						<li class="txt-s-101 cl6 flex-t p-b-10">
+							<span class="size-w-11">
+								<img th:src="@{/assets/images/icons/icon-pin.png}" alt="ICON-MAIL">
+							</span>
+							
+							<span class="size-w-12 p-t-1">
+								Thứ 2 đến CN: 9h - 18h (Hotline), 7h - 22h (chat trực tuyến) 
+							</span>
+						</li>
+						
+						<li class="txt-s-101 cl6 flex-t p-b-10">
+							<span class="size-w-11">
+								<img th:src="@{/assets/images/icons/icon-pin.png}" alt="ICON-MAIL">
+							</span>
+							
+							<span class="size-w-12 p-t-1">
+								193 Nguyễn Lương Bằng, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 
+							</span>
+						</li>
+
+						<li class="txt-s-101 cl6 flex-t p-b-10">
+							<span class="size-w-11">
+								<img th:src="@{/assets/images/icons/icon-phone.png}" alt="ICON-MAIL">
+							</span>
+							
+							<span class="size-w-12 p-t-1">
+								0236 3842 326
+							</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer-col2">
+					<div class="footer-col-title flex-m">
+						<span class="txt-m-109 cl3">
+							LIÊN HỆ
+						</span>
+					</div>
+
+					<ul>
+						<li class="p-b-16">
+							<a href="#" class="txt-s-101 cl6 hov-cl10 trans-04 p-tb-5">
+								Trung tâm hỗ trợ
+							</a>
+						</li>
+
+						<li class="p-b-16">
+							<a href="#" class="txt-s-101 cl6 hov-cl10 trans-04 p-tb-5">
+								Hướng dẫn đặt hàng
+							</a>
+						</li>
+
+						<li class="p-b-16">
+							<a href="#" class="txt-s-101 cl6 hov-cl10 trans-04 p-tb-5">
+								Giao hàng & nhận hàng
+							</a>
+						</li>
+
+						<li class="p-b-16">
+							<a href="#" class="txt-s-101 cl6 hov-cl10 trans-04 p-tb-5">
+								Điều kiện sử dụng voucher
+						</li>
+
+						
+					</ul>
+				</div>
+
+				<div class="footer-col3">
+					<div class="footer-col-title flex-m">
+						<span class="txt-m-109 cl3">
+							
+						</span>
+					</div>
+
+					<ul>
+						<li class="p-b-16">
+							<a href="#" class="txt-s-101 cl6 hov-cl10 trans-04 p-tb-5">
+								Bán hàng cùng VLTChau organic store
+							</a>
+						</li>
+
+						<li class="p-b-16">
+							<a href="#" class="txt-s-101 cl6 hov-cl10 trans-04 p-tb-5">
+								Điều khoản mua bán hàng hóa
+							</a>
+						</li>
+
+						<li class="p-b-16">
+							<a href="#" class="txt-s-101 cl6 hov-cl10 trans-04 p-tb-5">
+								Quy chế quản lý hoạt động
+							</a>
+						</li>
+
+						<li class="p-b-16">
+							<a href="#" class="txt-s-101 cl6 hov-cl10 trans-04 p-tb-5">
+								Chính sách bảo mật
+							</a>
+						</li>
+
+						<li class="p-b-16">
+							<a href="#" class="txt-s-101 cl6 hov-cl10 trans-04 p-tb-5">
+								Về VLTChau organic store Việt Nam
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer-col4">
+					<div class="footer-col-title flex-m">
+						<span class="txt-m-109 cl3">
+							App 
+						</span>
+					</div>
+
+					<div class="flex-w flex-sb p-t-6">
+						<div class="size-w-13 m-b-10">
+							<a href="#" class="dis-block size-a-7 bg-img1 hov4"
+							style="background-image: url('images/instagram-01.jpg');"></a>
+						</div>
+						
+						<div class="size-w-13 m-b-10">
+							<a href="#" class="dis-block size-a-7 bg-img1 hov4"
+							style="background-image: url('images/instagram-02.jpg');"></a>
+						</div>
+
+						<div class="size-w-13 m-b-10">
+							<a href="#" class="dis-block size-a-7 bg-img1 hov4"
+							style="background-image: url('images/instagram-03.jpg');"></a>
+						</div>
+
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="flex-w flex-sb-m bo-t-1 bocl14 p-tb-14">
+				<span class="txt-s-101 cl9 p-tb-10 p-r-29">
+					VLTChau © 2018 Organic products.
+				</span>
+
+				<div class="flex-w flex-m">
+					<a href="#" class="m-r-29 m-tb-10">
+						<img th:src="@{/assets/images/icons/icon-pay-01.png}" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-r-29 m-tb-10">
+						<img th:src="@{/assets/images/icons/icon-pay-02.png}" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-r-29 m-tb-10">
+						<img th:src="@{/assets/images/icons/icon-pay-03.png}" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-r-29 m-tb-10">
+						<img th:src="@{/assets/images/icons/icon-pay-04.png}" alt="ICON-PAY">
+					</a>
+
+					<a href="#">
+						<img th:src="@{/assets/images/icons/icon-pay-05.png}" alt="ICON-PAY">
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<span class="lnr lnr-chevron-up"></span>
+		</span>
+	</div>
+
+	<!-- start js -->
+	<div th:replace="static/js :: js">...</div>
+	<!-- end footer -->
+
+
+</body>
+</html>
